@@ -23,6 +23,11 @@ export class InicioPage implements OnInit {
         icono:'albums-outline',
         name:'Action Sheet',
         direccion:'/acciones'
+      },
+      {
+        icono:'accessibility-outline',
+        name:'Avatar',
+        direccion:'/avatar'
       }
 
     ]
