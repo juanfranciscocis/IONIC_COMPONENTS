@@ -12,4 +12,16 @@
       <ion-title size="large">Alertas</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-button (click)="presentAlert()">
+    <ion-label>Alerta Básica</ion-label>
+  </ion-button>
+  <ion-button (click)="alertaButtons()">
+    <ion-label>Alerta con botones</ion-label>
+  </ion-button>
+  <ion-button (click)="alertaInput()">
+    <ion-label>Alerta con input</ion-label>
+  </ion-button>
+  <ion-button (click)="radioAlert()">
+    <ion-label>Alerta de confirmación</ion-label>
+  </ion-button>
 </ion-content>
