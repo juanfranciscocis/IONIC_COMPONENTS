@@ -1,0 +1,47 @@
+<app-header></app-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Checkbox</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-checkbox>I agree to the terms and conditions</ion-checkbox>
+
+  <br>
+  <br>
+  <br>
+
+  <ion-list>
+    <ion-item>
+      <ion-checkbox justify="start">Packed at the Start of Line</ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-checkbox justify="end">Packed at the End of Line</ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-checkbox justify="space-between">Space Between Label and Control</ion-checkbox>
+    </ion-item>
+  </ion-list>
+
+  <br>
+  <br>
+  <br>
+
+  <ion-list>
+    <ion-item *ngFor="let datos of datos" [color]="datos.color" (click)="actualizarDatos(datos)" >
+      <ion-label>{{datos.color.toLocaleUpperCase()}}</ion-label>
+      <ion-checkbox slot="end" [color]="datos.color"  [(ngModel)]="datos.state"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+
+  <br>
+  <br>
+  <br>
+
+
+
+</ion-content>

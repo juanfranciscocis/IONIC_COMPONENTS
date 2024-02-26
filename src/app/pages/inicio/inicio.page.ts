@@ -20,7 +20,7 @@ export class InicioPage implements OnInit {
         direccion:'/alertas'
       },
       {
-        icono:'albums-outline',
+        icono:'newspaper-outline',
         name:'Action Sheet',
         direccion:'/acciones'
       },
@@ -28,7 +28,23 @@ export class InicioPage implements OnInit {
         icono:'accessibility-outline',
         name:'Avatar',
         direccion:'/avatar'
-      }
+      },
+      {
+        icono:'albums-outline',
+        name:'Cards',
+        direccion:'/card'
+
+      },
+      {
+        icono:'add-circle-outline',
+        name:'Botones',
+        direccion:'/botones'
+      },
+      {
+        icono:'checkbox-outline',
+        name:'Checkbox',
+        direccion:'/checkbox'
+      },
 
     ]
 
@@ -39,4 +55,5 @@ export class InicioPage implements OnInit {
   ngOnInit() {
   }
 
+  protected readonly String = String;
 }
