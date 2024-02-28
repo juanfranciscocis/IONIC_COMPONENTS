@@ -60,6 +60,10 @@ export class CheckboxPage implements OnInit {
   ngOnInit() {
   }
 
+  enviar(){
+    console.log(this.datos);
+  }
+
   actualizarDatos(datos:Datos){
     console.log(datos);
   }

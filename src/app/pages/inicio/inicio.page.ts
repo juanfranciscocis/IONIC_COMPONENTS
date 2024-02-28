@@ -45,6 +45,16 @@ export class InicioPage implements OnInit {
         name:'Checkbox',
         direccion:'/checkbox'
       },
+      {
+        icono: 'open-outline',
+        name: 'Floating Action Button',
+        direccion: '/fab'
+      },
+      {
+        icono: 'grid-outline',
+        name: 'Grid',
+        direccion: '/grids'
+      }
 
     ]
 
