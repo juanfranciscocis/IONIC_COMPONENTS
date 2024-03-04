@@ -54,6 +54,11 @@ export class InicioPage implements OnInit {
         icono: 'grid-outline',
         name: 'Grid',
         direccion: '/grids'
+      },
+      {
+        icono: 'list-outline',
+        name: 'List',
+        direccion: '/list'
       }
 
     ]

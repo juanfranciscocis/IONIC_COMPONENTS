@@ -44,6 +44,11 @@ const routes: Routes = [
     path: 'grids',
     loadChildren: () => import('./pages/grids/grids.module').then( m => m.GridsPageModule)
   },
+  {
+    path: 'list',
+    loadChildren: () => import('./pages/list/list.module').then( m => m.ListPageModule)
+  },
+
 ];
 
 @NgModule({
