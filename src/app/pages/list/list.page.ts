@@ -12,20 +12,27 @@ export class ListPage implements OnInit {
 
   usuarios: Observable<any> | undefined;
 
-  @ViewChild('IonList') ionList: IonList | undefined;
+  @ViewChild(IonList) ionList: IonList | undefined;
 
   constructor(private dataService:DataService) {}
 
   ngOnInit() {
-    this.usuarios = this.dataService.getUsuarios();
+   this.usuarios = this.dataService.getUsuarios();
   }
 
   delete(item: any) {
-    //delete item from usuarios
+    console.log('Borrando', item);
+    console.log('users', this.usuarios)
+    console.log('ionList', this.ionList)
     this.ionList?.closeSlidingItems();
   }
 
   edit(item: any) {
+    this.ionList?.closeSlidingItems();
+  }
+
+  success(item: any) {
+    this.ionList?.closeSlidingItems();
 
   }
 }

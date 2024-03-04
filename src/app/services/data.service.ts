@@ -12,6 +12,7 @@ export class DataService {
 
 
   getUsuarios():Observable<any>{
+    console.log(this.http.get('https://jsonplaceholder.typicode.com/users'))
     return this.http.get('https://jsonplaceholder.typicode.com/users');
   }
 
