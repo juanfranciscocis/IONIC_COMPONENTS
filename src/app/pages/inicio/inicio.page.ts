@@ -59,6 +59,11 @@ export class InicioPage implements OnInit {
         icono: 'list-outline',
         name: 'List',
         direccion: '/list'
+      },
+      {
+        icono: 'search-outline',
+        name: 'Search',
+        direccion: '/search'
       }
 
     ]

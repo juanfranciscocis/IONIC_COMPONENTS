@@ -16,5 +16,9 @@ export class DataService {
     return this.http.get('https://jsonplaceholder.typicode.com/users');
   }
 
+  getAlbums():Observable<any>{
+    return this.http.get('https://jsonplaceholder.typicode.com/albums');
+  }
+
 
 }
