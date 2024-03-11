@@ -3,9 +3,9 @@
     <ion-back-button slot="start" default-href="/" text="Regresar" color="primary"></ion-back-button>
   </ion-toolbar>
   <ion-searchbar
-    [debounce]="1000"
+    [debounce]="500"
     placeholder="Buscar"
-    (ionChange)="onSearchChange($event)"
+    (ionInput)="onSearchChange($event)"
     animated="true"
   ></ion-searchbar>
 </ion-header>
@@ -19,7 +19,7 @@
 
 
   <ion-list>
-    <ion-item *ngFor="let item of albums|filtro:query">
+    <ion-item *ngFor="let item of albums|filtro:query:'title'">
       <ion-label class="ion-text-capitalize">{{item.id}}. {{ item.title }}</ion-label>
     </ion-item>
   </ion-list>

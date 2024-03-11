@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import {OptMenu} from "../../interfaces/interfaces";
+import {DataService} from "../../services/data.service";
+import {Observable} from "rxjs";
 
 
-interface Componentes{
-  icono: string;
-  name: string;
-  direccion: string;
-}
+
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.page.html',
@@ -13,66 +12,17 @@ interface Componentes{
 })
 export class InicioPage implements OnInit {
 
-    componentes:Componentes[] = [
-      {
-        icono:'alert-outline',
-        name:'Alertas',
-        direccion:'/alertas'
-      },
-      {
-        icono:'newspaper-outline',
-        name:'Action Sheet',
-        direccion:'/acciones'
-      },
-      {
-        icono:'accessibility-outline',
-        name:'Avatar',
-        direccion:'/avatar'
-      },
-      {
-        icono:'albums-outline',
-        name:'Cards',
-        direccion:'/card'
-
-      },
-      {
-        icono:'add-circle-outline',
-        name:'Botones',
-        direccion:'/botones'
-      },
-      {
-        icono:'checkbox-outline',
-        name:'Checkbox',
-        direccion:'/checkbox'
-      },
-      {
-        icono: 'open-outline',
-        name: 'Floating Action Button',
-        direccion: '/fab'
-      },
-      {
-        icono: 'grid-outline',
-        name: 'Grid',
-        direccion: '/grids'
-      },
-      {
-        icono: 'list-outline',
-        name: 'List',
-        direccion: '/list'
-      },
-      {
-        icono: 'search-outline',
-        name: 'Search',
-        direccion: '/search'
-      }
-
-    ]
+     componentes!: Observable<OptMenu[]>;
 
 
 
-  constructor() { }
+  constructor(private data:DataService) {
+    this.componentes = this.data.getMenuOpt();
+  }
 
   ngOnInit() {
+
+
   }
 
   protected readonly String = String;
