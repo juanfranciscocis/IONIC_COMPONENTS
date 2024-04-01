@@ -1,4 +1,8 @@
-import { Component } from '@angular/core';
+import {Observable} from "rxjs";
+import {OptMenu} from "./interfaces/interfaces";
+import {Component, OnInit} from "@angular/core";
+import {DataService} from "./services/data.service";
+import {MenuController} from "@ionic/angular";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +10,20 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
+
+  componentes!: Observable<OptMenu[]>;
+
+
+  constructor(private data:DataService) {
+    this.componentes = this.data.getMenuOpt();
+  }
+
+
+  ngOnInit() {
+
+  }
+
+  protected readonly close = close;
+
+
 }

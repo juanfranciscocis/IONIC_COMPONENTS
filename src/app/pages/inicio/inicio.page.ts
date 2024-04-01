@@ -12,7 +12,7 @@ import {Observable} from "rxjs";
 })
 export class InicioPage implements OnInit {
 
-     componentes!: Observable<OptMenu[]>;
+  componentes!: Observable<OptMenu[]>;
 
 
 

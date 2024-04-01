@@ -5,7 +5,7 @@
     "direccion":"/alertas"
   },
   {
-    "icono":"newspaper-outline",
+    "icono":"american-football-outline",
     "name":"Action Sheet",
     "direccion":"/acciones"
   },
@@ -49,5 +49,15 @@
     "icono": "search-outline",
     "name": "Search",
     "direccion": "/search"
+  },
+  {
+    "icono": "reorder-three-outline",
+    "name": "Tabs",
+    "direccion": "/tabs"
+  },
+  {
+    "icono": "newspaper-outline",
+    "name": "News",
+    "direccion": "/news"
   }
 ]
