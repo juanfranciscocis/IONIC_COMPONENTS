@@ -1,0 +1,63 @@
+[
+  {
+    "icono":"alert-outline",
+    "name":"Alertas",
+    "direccion":"/alertas"
+  },
+  {
+    "icono":"american-football-outline",
+    "name":"Action Sheet",
+    "direccion":"/acciones"
+  },
+  {
+    "icono":"accessibility-outline",
+    "name":"Avatar",
+    "direccion":"/avatar"
+  },
+  {
+    "icono":"albums-outline",
+    "name":"Cards",
+    "direccion":"/card"
+
+  },
+  {
+    "icono":"add-circle-outline",
+    "name":"Botones",
+    "direccion":"/botones"
+  },
+  {
+    "icono":"checkbox-outline",
+    "name":"Checkbox",
+    "direccion":"/checkbox"
+  },
+  {
+    "icono": "open-outline",
+    "name": "Floating Action Button",
+    "direccion": "/fab"
+  },
+  {
+    "icono": "grid-outline",
+    "name": "Grid",
+    "direccion": "/grids"
+  },
+  {
+    "icono": "list-outline",
+    "name": "List",
+    "direccion": "/list"
+  },
+  {
+    "icono": "search-outline",
+    "name": "Search",
+    "direccion": "/search"
+  },
+  {
+    "icono": "reorder-three-outline",
+    "name": "Tabs",
+    "direccion": "/tabs"
+  },
+  {
+    "icono": "newspaper-outline",
+    "name": "News",
+    "direccion": "/news"
+  }
+]
