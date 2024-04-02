@@ -7,16 +7,26 @@ import { NewsPage } from './news.page';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'newstab2' ,
+    redirectTo: '/news/newstab1',
     pathMatch: 'full'
   },
   {
-    path: 'newstab1',
-    loadChildren: () => import('../newstab1/newstab1.module').then( m => m.Newstab1PageModule)
-  },
-  {
-    path: 'newstab2',
-    loadChildren: () => import('../newstab2/newstab2.module').then( m => m.Newstab2PageModule)
+    path: '',
+    component: NewsPage,
+    children: [
+      {
+        path: 'newstab1',
+        loadChildren: () => import('../newstab1/newstab1.module').then( m => m.Newstab1PageModule)
+      },
+      {
+        path: 'newstab2',
+        loadChildren: () => import('../newstab2/newstab2.module').then( m => m.Newstab2PageModule)
+      },
+      {
+        path: 'newstab3',
+        loadChildren: () => import('../newstab3/newstab3.module').then( m => m.Newstab3PageModule)
+      }
+    ]
   },
 ];
 

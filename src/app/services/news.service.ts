@@ -7,10 +7,12 @@ import {NewsResp} from "../interfaces/interfaces";
 })
 export class NewsService {
 
+  private url:string = "https://newsapi.org/v2/everything?q=apple&from=2024-04-01&to=2024-04-01&sortBy=popularity&apiKey=899cae8c0f814e7ebba3ba91476ef650";
+
   constructor(private http:HttpClient) { }
 
   getNews(){
-    return this.http.get<NewsResp>("https://newsapi.org/v2/everything?q=tesla&from=2024-03-01&sortBy=publishedAt&apiKey=899cae8c0f814e7ebba3ba91476ef650");
+    return this.http.get<NewsResp>(this.url);
   }
 
 }

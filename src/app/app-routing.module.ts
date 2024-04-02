@@ -60,6 +60,18 @@ const routes: Routes = [
     path: 'news',
     loadChildren: () => import('./pages/news/news.module').then( m => m.NewsPageModule)
   },
+  {
+    path: 'newstab1',
+    loadChildren: () => import('./pages/newstab1/newstab1.module').then( m => m.Newstab1PageModule)
+  },
+  {
+    path: 'newstab2',
+    loadChildren: () => import('./pages/newstab2/newstab2.module').then( m => m.Newstab2PageModule)
+  },
+  {
+    path: 'newstab3',
+    loadChildren: () => import('./pages/newstab3/newstab3.module').then( m => m.Newstab3PageModule)
+  }
 
 
 ];
