@@ -2,6 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import {Category} from "../../interfaces/interfaces";
 import {NewsService} from "../../services/news.service";
 import {DataService} from "../../services/data.service";
+import {Observable} from "rxjs";
+import {DocumentData} from "@angular/fire/compat/firestore";
+
+
+interface User {
+  name: string;
+  lastname: string;
+}
 
 @Component({
   selector: 'app-newstab2',
@@ -49,16 +57,27 @@ export class Newstab2Page implements OnInit {
     }
   ];
 
+
   segmentChanged(event:any){
     console.log(event);
   }
+  user:User | undefined;
+  constructor(private service:NewsService) {
+    this.service.getUserProfile().subscribe((data)=>{
+      if(data){
+        this.user = data as User;
+        console.log(this.user.name);
+      }
+    }
+    );
 
-  constructor() {
+
 
 
   }
 
   ngOnInit() {
+
 
 
 
