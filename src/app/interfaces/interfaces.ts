@@ -25,3 +25,11 @@ export interface Source {
   id?: string
   name: string
 }
+
+
+
+export interface Category {
+  name: string;
+  icon: string;
+  color: string;
+}
