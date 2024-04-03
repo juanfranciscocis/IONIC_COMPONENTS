@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Category} from "../../interfaces/interfaces";
 import {NewsService} from "../../services/news.service";
+import {DataService} from "../../services/data.service";
 
 @Component({
   selector: 'app-newstab2',
@@ -52,8 +53,10 @@ export class Newstab2Page implements OnInit {
     console.log(event);
   }
 
+  constructor() {
 
-  constructor() { }
+
+  }
 
   ngOnInit() {
 

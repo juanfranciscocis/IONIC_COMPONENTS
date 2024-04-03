@@ -22,4 +22,5 @@ export class NewsService {
     return this.http.get<NewsResp>(this.urlCat + `category=${category}&apiKey=${this.apiKey}`);
   }
 
+
 }
