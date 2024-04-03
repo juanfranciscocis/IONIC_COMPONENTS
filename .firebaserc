@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "proyectoclasepwa": {
+      "hosting": {
+        "app": [
+          "proyectoclasepwa"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "proyectoclasepwa"
+  }
+}

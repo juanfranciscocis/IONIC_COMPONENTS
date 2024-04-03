@@ -1,28 +1,15 @@
+
 <app-header></app-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tesla News</ion-title>
+      <ion-title size="large">Apple News</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <ion-grid>
-    <ion-row>
-      <ion-col size="12" size-md="6" *ngFor="let n of news">
-        <ion-card href="{{n.url}}" target="_blank" class="news-card">
-          <ion-card-header class="header-space">
-            <ion-card-subtitle>{{n.author}}</ion-card-subtitle>
-            <ion-card-title>{{n.title}}</ion-card-title>
-          </ion-card-header>
-          <img *ngIf="n.urlToImage" [src]="n.urlToImage" class="news-image" />
-          <ion-card-content class="descrip-wrap">
-              {{n.description}}
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+  <app-news [news]="news"></app-news>
+
 </ion-content>
 
 
