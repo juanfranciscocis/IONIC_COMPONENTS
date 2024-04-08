@@ -1,8 +1,8 @@
 <ion-card-header class="header-space">
-  <ion-card-subtitle>{{article.author}}</ion-card-subtitle>
-  <ion-card-title>{{article.title}}</ion-card-title>
+  <ion-card-subtitle (click)="abrirNoticia()">{{article.author}} </ion-card-subtitle>
+  <ion-card-title (click)="abrirNoticia()" >{{article.title}}</ion-card-title>
 </ion-card-header>
-<img *ngIf="article.urlToImage" [src]="article.urlToImage" class="news-image" />
-<ion-card-content class="descrip-wrap">
+<img (click)="abrirNoticia()" *ngIf="article.urlToImage" [src]="article.urlToImage" class="news-image" />
+<ion-card-content class="descrip-wrap" (click)="abrirNoticia()">
   {{article.description}}
 </ion-card-content>
