@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Category} from "../../interfaces/interfaces";
+import {Article, Category, NewsResp} from "../../interfaces/interfaces";
 import {NewsService} from "../../services/news.service";
 import {DataService} from "../../services/data.service";
 import {Observable} from "rxjs";
@@ -58,22 +58,24 @@ export class Newstab2Page implements OnInit {
   ];
 
 
+  public news:Article[] = [];
+
   segmentChanged(event:any){
-    console.log(event);
+    this.news = [];
+    //Call to the service
+    this.service.getByCategory(event.detail.value).subscribe((data)=>{
+      this.news.push(...data.articles);
+      console.log(this.news);
+    });
+
   }
+
+
+
+
   user:User | undefined;
   constructor(private service:NewsService) {
-    this.service.getUserProfile().subscribe((data)=>{
-      if(data){
-        this.user = data as User;
-        console.log(this.user.name);
-      }
-    }
-    );
-
-
-
-
+    this.segmentChanged({detail:{value:'business'}});
   }
 
   ngOnInit() {

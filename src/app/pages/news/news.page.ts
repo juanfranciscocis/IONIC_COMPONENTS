@@ -9,6 +9,9 @@ export class NewsPage implements OnInit {
 
   constructor() { }
 
+
+
+
   ngOnInit() {
   }
 
