@@ -1,13 +1,11 @@
-
-
-
-
-
 <ion-grid>
   <ion-row>
     <ion-col size="12" size-md="6" *ngFor="let n of news">
-      <ion-card class="news-card">
+      <ion-card class="news-card" >
         <app-news-detail [article]="n"></app-news-detail>
+        <div class="flex content-center justify-center p-5 bg-blue-50" (click)="openActionSheet(n)">
+          <ion-icon name="share-outline" class="text-4xl"></ion-icon>
+        </div>
       </ion-card>
     </ion-col>
   </ion-row>
@@ -17,4 +15,5 @@
     </ion-col>
   </ion-row>
 </ion-grid>
+
 
