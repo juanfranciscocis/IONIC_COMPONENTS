@@ -16,10 +16,12 @@ export class AppComponent {
 
   constructor(private data:DataService) {
     this.componentes = this.data.getMenuOpt();
+
   }
 
 
   ngOnInit() {
+
 
   }
 

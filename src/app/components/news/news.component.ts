@@ -29,6 +29,16 @@ export class NewsComponent  implements OnInit {
       }
     },
     {
+      text:'Favorite',
+      data: {
+        action: 'favorite',
+      },
+  handler: () => {
+    console.log('Favorite clicked');
+
+  }
+    },
+    {
       text: 'Cancel',
       role: 'cancel',
       data: {
